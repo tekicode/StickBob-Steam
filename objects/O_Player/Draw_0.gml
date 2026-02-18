@@ -10,49 +10,10 @@ draw_self()
 draw_set_alpha(1)
 	if (sprite_index == sprPlayerSkidLeft){
 		draw_sprite_ext(sprPlayerGun, 0, x+5,y-3, image_xscale, -1, mouseAngle, c_white, 1)
-		if(playerHealth <= 4){
-			draw_sprite_ext(sprPlayerHit, image_index, x+5, y-3, image_xscale, image_yscale, 0, c_white, 1)
-		}
-		if(playerHealth <= 3){
-			draw_sprite_ext(sprPlayerHit, image_index, x+5, y-3, image_xscale, -1, 180, c_white, 1)
-		}
-		if(playerHealth <= 2){
-				if(xSpeed >= 0){
-					draw_sprite_ext(sprPlayerPuddle, image_index, x+5, y-3, image_xscale, image_yscale, 0, c_white, 1)
-				} else {
-					draw_sprite_ext(sprPlayerPuddle, image_index, x+5, y-3, image_xscale, -1, 180, c_white, 1)
-				}
-		}
-		if(playerHealth <= 1){
-				if(xSpeed > 0){
-					draw_sprite_ext(sprPlayerPuddle, image_index, x+5, y-3, image_xscale, -1, 180, c_white, 1)
-				} else {
-					draw_sprite_ext(sprPlayerPuddle, image_index, x+5, y-3, image_xscale, image_yscale, 0, c_white, 1)
-				}
-		}
 	}
 	else if (sprite_index == sprPlayerRunLeft){
-		draw_sprite_ext(sprPlayerGun, 0, x-1,y-1, image_xscale, -1, mouseAngle, c_white, 1)
-		if(playerHealth <= 4){
-			draw_sprite_ext(sprPlayerHit, image_index, x-1, y-1, image_xscale, image_yscale, 0, c_white, 1)
-		}
-		if(playerHealth <= 3){
-			draw_sprite_ext(sprPlayerHit, image_index, x-1, y-1, image_xscale, -1, 180, c_white, 1)
-		}
-		if(playerHealth <= 2){
-				if(xSpeed >= 0){
-					draw_sprite_ext(sprPlayerPuddle, image_index, x-1, y-1, image_xscale, image_yscale, 0, c_white, 1)
-				} else {
-					draw_sprite_ext(sprPlayerPuddle, image_index, x-1, y-1, image_xscale, -1, 180, c_white, 1)
-				}
-		}
-		if(playerHealth <= 1){
-				if(xSpeed > 0){
-					draw_sprite_ext(sprPlayerPuddle, image_index, x-1, y-1, image_xscale, -1, 180, c_white, 1)
-				} else {
-					draw_sprite_ext(sprPlayerPuddle, image_index, x-1, y-1, image_xscale, image_yscale, 0, c_white, 1)
-				}
-		}
+		draw_sprite_ext(sprPlayerGun, 0, x+3,y+1, image_xscale, -1, mouseAngle, c_white, 1)
+		
 	}
 	else if (sprite_index == sprPlayerSlideLeft){
 		draw_sprite_ext(sprPlayerGun, 0, x+8,y+10, image_xscale, -1, mouseAngle, c_white, 1)
@@ -92,17 +53,14 @@ if(playerHealth <= 4){
 if(playerHealth <= 3){
 		draw_sprite_ext(sprPlayerHit, image_index, x, y, image_xscale, -1, 180, c_white, 1)
 }
-if(playerHealth <= 2){
-		if(xSpeed >= 0){
-			draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1)
-		} else {
-			draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, -1, 180, c_white, 1)
-		}
+if(playerHealth == 2){
+	if(xSpeed >= 0){
+		draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1)
+	} else {
+		draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, -1, 180, c_white, 1)
+	}
 }
 if(playerHealth <= 1){
-		if(xSpeed > 0){
-			draw_sprite_ext(sprPlayerPuddle, image_index, x, y-2, image_xscale, -1, 180, c_white, 1)
-		} else {
-			draw_sprite_ext(sprPlayerPuddle, image_index, x, y-2, image_xscale, image_yscale, 0, c_white, 1)
-		}
+		draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1)
+		draw_sprite_ext(sprPlayerPuddle, image_index, x, y, image_xscale, -1, 180, c_white, 1)
 }

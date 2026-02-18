@@ -272,7 +272,7 @@ function playerSpriteIndexer(){
 		sprite_index = sprPlayerCrawlLeft;
 		mask_index = sprPlayerCrawlLeft;
 	}
-	else if(isCrawling){
+	else if(isCrawling && global.stopShooting == false){
 		sprite_index = sprPlayerCrawl;
 		mask_index = sprPlayerCrawl;	
 	}
