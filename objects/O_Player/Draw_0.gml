@@ -47,10 +47,10 @@ draw_set_alpha(1)
 
 //blood effect
 if(playerHealth <= 4){
-		draw_sprite_ext(sprPlayerHit, 0, x, y, image_xscale, image_yscale, 0, c_white, 1)
+		draw_sprite_ext(sprPlayerHit, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1)
 }
 if(playerHealth <= 3){
-		draw_sprite_ext(sprPlayerHit, 0, x, y, image_xscale, -1, 180, c_white, 1)
+		draw_sprite_ext(sprPlayerHit, image_index, x, y, image_xscale, -1, 180, c_white, 1)
 }
 if(playerHealth <= 2){
 		if(xSpeed >= 0){
