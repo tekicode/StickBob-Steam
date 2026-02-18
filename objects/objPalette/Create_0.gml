@@ -1,0 +1,1 @@
+global.gameParams.playerColor = 16777215

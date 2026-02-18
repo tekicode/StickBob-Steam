@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"all_my_heroes_quit",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":164.57143,
+  "exportDir":"",
+  "name":"all_my_heroes_quit",
+  "parent":{
+    "name":"4NG3LWARE",
+    "path":"folders/Sounds/Music/4NG3LWARE.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"all_my_heroes_quit.mp3",
+  "volume":1.0,
+}

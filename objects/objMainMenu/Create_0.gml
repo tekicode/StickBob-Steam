@@ -1,0 +1,18 @@
+// Create Event
+
+menu_x = room_width / 2; // Center the menu horizontally
+menu_y = room_height / 2; // Position vertically
+button_h = 40; // Vertical spacing between options
+
+// Array of menu options (strings)
+button[0] = "Host Game";
+button[1] = "Join Game";
+button[2] = "SinglePlayer";
+button[3] = "Exit";
+button[4] = "SadGirlsClub.WTF";
+
+
+buttons = array_length_1d(button); // Get the number of buttons
+menu_index = 0; // Current selected item index (starts at 0)
+last_selected = 0; // Track the last selection to prevent repeated sound playing
+

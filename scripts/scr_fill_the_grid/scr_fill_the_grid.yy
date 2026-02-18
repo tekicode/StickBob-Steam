@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_fill_the_grid",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_fill_the_grid",
+  "parent":{
+    "name":"group1",
+    "path":"folders/Scripts/group1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
