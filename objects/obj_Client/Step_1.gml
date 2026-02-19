@@ -15,6 +15,9 @@ while(steam_net_packet_receive()){
 			sync_players(_playerList)
 			break
 		case NETWORK_PACKETS.SPAWN_OTHER:
+			// TODO(human): replace the manual buffer_reads below with a single
+			// pkt_read() call using pkt_schema(NETWORK_PACKETS.SPAWN_OTHER).
+			// The result struct will have fields: x, y, steamID.
 			var _layer = layer_get_id("Instances");
 			var _x = buffer_read(inbuf, buffer_u16)
 			var _y = buffer_read(inbuf, buffer_u16)
@@ -32,10 +35,13 @@ while(steam_net_packet_receive()){
 				lobbyMemberID : _num
 			})
 			break
-			
+
 		case NETWORK_PACKETS.SPAWN_SELF:
+			// TODO(human): replace the manual buffer_reads below with a single
+			// pkt_read() call using pkt_schema(NETWORK_PACKETS.SPAWN_SELF).
+			// The result struct will have fields: x, y.
 			for (var _i = 0; _i < array_length(playerList); _i++){
-				if playerList[_i].steamID == steamID then lobbyMemberID = playerList[_i].lobbyMemberID	
+				if playerList[_i].steamID == steamID then lobbyMemberID = playerList[_i].lobbyMemberID
 			}
 			var _layer = layer_get_id("Instances");
 			var _x = buffer_read(inbuf, buffer_u16)
