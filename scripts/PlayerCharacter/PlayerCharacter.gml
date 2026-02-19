@@ -175,7 +175,7 @@ function paddle_movement() {
 
 	// --- Vertical collision with solid objects ---
 	if (place_meeting(x, y + ySpeed, objSolid)){
-		canJump = true;
+		if (yInput == 0) canJump = true;
 		// Nudge to exact contact before zeroing speed
 		while (!place_meeting(x, y + sign(ySpeed), objSolid)){
 			y += sign(ySpeed);
